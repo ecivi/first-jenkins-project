@@ -6,11 +6,11 @@ test("Youtube Search", async ({ page }) => {
 
   await page.goto("https://www.youtube.com/");
 
-  let searchBox = page.locator("//input[@name='search_query']");
+  let searchBox = page.locator("(//input[@name='search_query'])[1]");
 
   await searchBox.click();
 
-  await searchBox.fill("Cydeo");
+  await searchBox.fill("wooden spoon");
 
   await searchBox.press("Enter");
   
